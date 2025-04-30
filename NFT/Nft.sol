@@ -8,8 +8,7 @@ contract CryptoCollectibles is ERC721, Ownable {
     uint256 private _nextTokenId; // Tracks the next tokenId
     string private _baseTokenURI; // Base URI for metadata
     mapping(uint256 => string) private _tokenNames; // tokenId => Name
-    constructo
-    "CCOL") Ownable(msg.sender) {
+    constructor(string memory baseURI_) ERC721("CryptoCollectibles", "CCOL") Ownable(msg.sender) {
         _baseTokenURI = baseURI_;
         _nextTokenId = 1; // Start token IDs from 1
     }
